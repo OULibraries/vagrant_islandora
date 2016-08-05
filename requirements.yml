@@ -10,3 +10,6 @@
 - src: https://github.com/OULibraries/ansible-role-users
   version: v2016-06-10.0
   name: OULibraries.users
+
+- src: https://github.com/OULibraries/ansible-role-fcrepo3
+  name: OULibraries.fcrepo3
