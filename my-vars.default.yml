@@ -1,0 +1,52 @@
+---
+# The configuration below would get you a server ready to run
+# d7_init.sh /srv/drupal-dev1 and d7_init.sh /srv/drupal-dev2
+
+# This example forwards:
+# https://drupal-dev1.drupal.vm.test on the vagrant host to https://drupal-dev1.ngrok.io and
+# https://drupal-dev2.drupal.vm.test on the vagrant host to https://drupal-dev2.ngrok.io
+
+# Developer ID and Auth
+
+# Your email address
+email: 'user@example.com'
+# Your ngrok token
+ngrok_authtoken: ''
+
+# Local APC credentials
+apc_username: apcuser
+apc_password: apcpass
+
+# Configuration for tunnels.
+# Note that because proto == tls, traffic is encrypted end-to-end, rather than cleartext. This is good.
+# DO NOT PASS SENSITIVE DATA OVER CLEARTEXT TUNNELS.
+tunnels:
+  - name: 'drupal-dev1'
+    dn_suffix: 'ngrok.io'
+    port: '443'
+    proto: 'tls'
+  - name: 'drupal-dev2'
+    dn_suffix: 'ngrok.io'
+    port: '443'
+    proto: 'tls'
+
+# Local credentials
+# additional shell accounts
+users:
+  - name: 'libacct'
+    groups: 'wheel'
+    pubkey: 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAtkaGGkonm3HJmRoupKgM0A04uZu3aPhFyWmyMWCHTk1TtDskTgO0krOgUKuxAB2G/d39Xz6oISL9+dQdZt5aEJK7WoHpkK8l8xXfrIJ8OiWuJ+IRygjjLsib8tVTRsEIvMrQUtnhGzVNM7lQNXaEviGmR+ZunH68fv/QpomR5qW/veLFsR0KQLnd8yoG2+Tm8EdYouDcUPTS1nr9XdPSWGcsvpDq48JdxSmtXXC/8NHfdhpmCMmoC/IXbFl7typeLd9gt7EFvqOLWEbysEF3hD6hMAV3MEWaDnhf25n2cUgdAvdk086REgg2bXx1dBdeSi+wq5MadfP80UuPuaN2lw== libacct@ou.edu'
+
+ssh_brokers:
+  - alias: 'localhost'
+    ip: '127.0.0.1'
+    dn_suffix: 'localhost'
+
+# root db password
+mariadb_root_pass: 'root'
+
+# Passing the local domain on to apache
+httpd_dn_suffix: "ngrok.io"
+
+# Style of environment to build: vagrant, test or prod
+environment_name: "webdev"
