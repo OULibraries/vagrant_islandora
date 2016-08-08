@@ -13,3 +13,6 @@
 
 - src: https://github.com/OULibraries/ansible-role-fcrepo3
   name: OULibraries.fcrepo3
+
+- src: https://github.com/OULibraries/ansible-role-drupal
+  name: OULibraries.drupal
