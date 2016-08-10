@@ -11,11 +11,15 @@
       assert:
         that:
           - mariadb_root_pass is defined
-
   roles:
     - OULibraries.centos7
     - OULibraries.mariadb
     - OULibraries.fcrepo3
+    - OULibraries.apache2
+    - OULibraries.d7
+    - OULibraries.d7-islandora
+    - OULibraries.ngrok
+    - OULibraries.users
 
   tasks:
     - name: Enable selinux for testing
@@ -35,6 +39,11 @@
         append: yes
         groups: vagrant
     - name: Add vagrant user to apache group
+      user:
+        name: vagrant
+        append: yes
+        groups: apache
+    - name: Add vagrant user to tomcat group
       user:
         name: vagrant
         append: yes
