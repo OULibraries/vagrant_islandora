@@ -10,7 +10,8 @@ Vagrant.configure(2) do |config|
   
   # Our starting point for CentOS is Jeff Geerling's ansible base box. 
   # https://github.com/geerlingguy/packer-centos-7/
-  config.vm.box = "geerlingguy/centos7" 
+  config.vm.box = "geerlingguy/centos7"
+  config.ssh.insert_key = false
 
   # Virtualbox-specific machine configuration
   # config.vm.provider "virtualbox" do |vb|
