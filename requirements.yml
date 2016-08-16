@@ -11,9 +11,9 @@
   version: v2016-04-08.0
   name: OULibraries.mariadb
 
-- src: https://github.com/OULibraries/ansible-role-d7
-  version: v2016-07-29.0
-  name: OULibraries.d7
+#- src: https://github.com/OULibraries/ansible-role-d7
+#  version: v2016-07-29.0
+#  name: OULibraries.d7
 
 - src: https://github.com/OULibraries/ansible-role-ngrok
   version: v2016-04-08.0
@@ -23,8 +23,8 @@
   version: v2016-06-10.0
   name: OULibraries.users
 
-- src: https://github.com/OULibraries/ansible-role-fcrepo3
-  name: OULibraries.fcrepo3
+#- src: https://github.com/OULibraries/ansible-role-fcrepo3
+#  name: OULibraries.fcrepo3
 
-- src: https://github.com/OULibraries/ansible-role-d7-islandora
-  name: OULibraries.d7-islandora
+#- src: https://github.com/OULibraries/ansible-role-d7-islandora
+#  name: OULibraries.d7-islandora
