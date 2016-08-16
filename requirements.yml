@@ -11,9 +11,9 @@
   version: v2016-04-08.0
   name: OULibraries.mariadb
 
-#- src: https://github.com/OULibraries/ansible-role-d7
-#  version: v2016-07-29.0
-#  name: OULibraries.d7
+- src: https://github.com/OULibraries/ansible-role-d7
+  version: v2016-07-29.0
+  name: OULibraries.d7
 
 - src: https://github.com/OULibraries/ansible-role-ngrok
   version: v2016-04-08.0
