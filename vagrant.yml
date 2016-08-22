@@ -12,6 +12,13 @@
       assert:
         that:
           - mariadb_root_pass is defined
+
+    - name: TEMP make /tmp/downloads
+      file: path=/tmp/downloads state=directory mode=0755 force=yes
+
+    - name: TEMP copy install files to /tmp/downloads/
+      copy: src=/vagrant/files/ dest=/temp/downloads/
+
   roles:
     - { role: OULibraries.centos7, tags: ["centos7"] }
     - { role: OULibraries.mariadb, tags: ["mariadb"] }
