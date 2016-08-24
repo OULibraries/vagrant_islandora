@@ -10,11 +10,15 @@ yum install -y ansible
 
 # ansible complains if these files are on the windows share because permissions
 # cp /vagrant/hosts /etc/ansible/hosts
-cp /vagrant/ansible.cfg /etc/ansible/ansible.cfg
+cp -v /vagrant/ansible.cfg /etc/ansible/ansible.cfg
+
+# mkdir /tmp/downloads
+# cp -v /vagrant/files/* /tmp/downloads/
+
 # cp /vagrant/.vagrant/machines/default/virtualbox/private_key /etc/ansible/private_key
 # set complaint-free permissions
-chmod 600 /etc/ansible/private_key
-chmod -x /etc/ansible/hosts
+# chmod 600 /etc/ansible/private_key
+# chmod -x /etc/ansible/hosts
 
 # run ansible
 ansible-galaxy install -r /vagrant/requirements.yml --force
