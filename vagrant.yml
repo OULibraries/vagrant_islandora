@@ -13,14 +13,22 @@
         that:
           - mariadb_root_pass is defined
   roles:
-    - OULibraries.centos7
-    - OULibraries.mariadb
-    - OULibraries.fcrepo3
-    - OULibraries.apache2
-    - OULibraries.d7
-    - OULibraries.d7-islandora
-    - OULibraries.ngrok
-    - OULibraries.users
+   - role: OULibraries.centos7
+     tags: centos7
+   - role: OULibraries.mariadb
+     tags: mariadb
+   - role: OULibraries.fcrepo3
+     tags: fcrepo3
+   - role: OULibraries.apache2
+     tags: apache2
+   - role: OULibraries.users
+     tags: users
+   - role: OULibraries.ngrok
+     tags: ngrok
+   - role: OULibraries.d7
+     tags: d7
+   - role: OULibraries.d7-islandora
+     tags: d7-islandora
 
   tasks:
     - name: Enable selinux for testing
