@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-VAGRANT_USER="lmc"
+VAGRANT_USER="vagrant"
 VAGRANT_COMMAND = ARGV[0]
 
 Vagrant.configure(2) do |config|
